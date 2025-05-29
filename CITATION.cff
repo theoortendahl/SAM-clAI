@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Örtendahl"
+  given-names: "Theo"
+title: "Deep learning-based methods for segmentation and labelling of clay"
+version: 1
+date-released: 2025-06-05
+url: "https://github.com/theoortendahl/SAM-clAI"

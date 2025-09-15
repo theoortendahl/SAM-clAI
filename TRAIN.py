@@ -16,6 +16,8 @@ import os
 from sam2.build_sam import build_sam2
 from sam2.sam2_image_predictor import SAM2ImagePredictor
 
+image_size = 512
+
 # Read data
 
 print('Constructing data path array')
@@ -34,7 +36,7 @@ def read_batch(data): # read random image and its annotation from  the dataset
 
    # resize image
 
-        r = np.min([1024 / Img.shape[1], 1024 / Img.shape[0]]) # scalling factor
+        r = np.min([image_size / Img.shape[1], image_size / Img.shape[0]]) # scalling factor
         Img = cv2.resize(Img, (int(Img.shape[1] * r), int(Img.shape[0] * r)))
         ann_map = cv2.resize(ann_map, (int(ann_map.shape[1] * r), int(ann_map.shape[0] * r)),interpolation=cv2.INTER_NEAREST)
 
